@@ -1,7 +1,7 @@
 import { FileIcon, Folder as FolderIcon } from "lucide-react";
-import { type File, type Folder } from "~/lib/mock-data";
+import { type IFolder, type IFile } from "./drive-contents";
 
-export const FileRow = ({ file }: { file: File }) => {
+export const FileRow = ({ file }: { file: IFile }) => {
   return (
     <li
       key={file.id}
@@ -29,7 +29,7 @@ export const FolderRow = ({
   folder,
   handleFolderClick,
 }: {
-  folder: Folder;
+  folder: IFolder;
   handleFolderClick: () => void;
 }) => {
   return (
