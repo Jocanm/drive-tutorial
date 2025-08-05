@@ -1,13 +1,9 @@
-import { db } from "~/server/db";
-import {
-  files as filesSchema,
-  folders as folderSchema,
-} from "~/server/db/schema";
-import DriveContents from "./drive-contents";
+import React from "react";
 
-export default async function GoogleDriveClone() {
-  const files = await db.select().from(filesSchema);
-  const folders = await db.select().from(folderSchema);
-
-  return <DriveContents files={files} folders={folders} />;
-}
+export const HomePage = () => {
+  return (
+    <div className="flex flex-col items-center justify-center h-screen">
+      Welcome to the Home Page! Navigate to a folder to view its contents.
+    </div>
+  );
+};
